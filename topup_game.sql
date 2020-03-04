@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 01, 2020 at 02:55 PM
+-- Generation Time: Mar 04, 2020 at 03:33 AM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.2
 
@@ -85,7 +85,8 @@ INSERT INTO `history` (`id`, `nama`, `email`, `tgl_pembelian`) VALUES
 (14, 'nanda', 'csnanda55@ymail.com', '2020-03-01'),
 (15, 'nanda', 'csnanda55@ymail.com', '2020-03-01'),
 (16, 'nanda', 'csnanda55@ymail.com', '2020-03-01'),
-(17, 'nanda', 'csnanda55@ymail.com', '2020-03-01');
+(17, 'nanda', 'csnanda55@ymail.com', '2020-03-01'),
+(18, 'nanda', 'csnanda55@ymail.com', '2020-03-02');
 
 -- --------------------------------------------------------
 
@@ -106,7 +107,10 @@ CREATE TABLE `transaksi` (
 --
 
 INSERT INTO `transaksi` (`id`, `id_history`, `id_game`, `nama_game`, `harga`) VALUES
-(4, 16, 8, 'Deus Ex', 145000);
+(4, 16, 8, 'Deus Ex', 145000),
+(5, 18, 8, 'Deus Ex', 145000),
+(6, 18, 7, 'Just Cause : 3', 230000),
+(7, 18, 6, 'Final Fantasi : XV', 840000);
 
 -- --------------------------------------------------------
 
@@ -126,7 +130,8 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `username`, `email`, `password`) VALUES
-(1, 'nanda', 'csnanda55@ymail.com', '123');
+(1, 'nanda', 'csnanda55@ymail.com', '123'),
+(3, 'gusti', 'anandagin30@gmail.com', '12345');
 
 --
 -- Indexes for dumped tables
@@ -172,19 +177,19 @@ ALTER TABLE `game`
 -- AUTO_INCREMENT for table `history`
 --
 ALTER TABLE `history`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT for table `transaksi`
 --
 ALTER TABLE `transaksi`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- Constraints for dumped tables

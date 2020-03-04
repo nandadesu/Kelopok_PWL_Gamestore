@@ -18,7 +18,7 @@
       <!-- Topbar -->
       <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
 
-      <a class="sidebar-brand d-flex align-items-center justify-content-center"  href="<?php echo base_url('Admin/index') ?>">
+      <a class="sidebar-brand d-flex align-items-center justify-content-center"  href="<?php echo base_url('Home/index') ?>">
         <div class="sidebar-brand-icon rotate-n-15">
         <i class="fa fa-home" aria-hidden="true"></i>
         </div>

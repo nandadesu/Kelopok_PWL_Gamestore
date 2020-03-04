@@ -67,30 +67,7 @@
             }
             
         }
-        public function detail($id_barang)
-        {
-            $data['game']= $this->model_barang->detail_barang($id_barang);
-            $this->load->view('Template/Header');
-            $this->load->view('Template/Sidebar');
-            $this->load->view('Admin/detail_barang',$data) ;
-            $this->load->view('Template/Footer');
-        }
-
-
-        public function user()
-        {
-            $this->load->view('Template_user/Header');
-            $this->load->view('Template_user/Sidebar');
-            $this->load->view('Akun/User_profile') ;
-            $this->load->view('Template_user/Footer');
-        }
-
-        // public function bayar_pesanan(){
-        //     $this->db->select('id_game, harga');
-        //     $this->db->from('game g');
-
-        // }
-    
+        
     }
     
     /* End of file Admin.php */

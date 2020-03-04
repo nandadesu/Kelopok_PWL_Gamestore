@@ -10,28 +10,28 @@
             $nama       = $this->input->post('nama');
             $email      = $this->input->post('email');
 
-            $data = array(
+            $history = array(
                 'nama'          => $nama,
                 'email'             => $email,
-                'tgl_pembelian'     => date('Y-m-d H:i:s'),
+                'tgl_pembelian'     => date('Y-m-d H:i:s')
             );
-            $this->db->insert('history', $data);
+            $this->db->insert('history', $history);
             $id_history = $this->db->insert_id();
 
             foreach($this->cart->contents() as $item){
-                $data  = array(
+                $transaksi  = array(
                     'id_history'    => $id_history,
                     'id_game'     => $item['id'],
                     'nama_game'   => $item['name'],
                     'harga'         => $item['price'],
                 );
-                $this->db->insert('transaksi', $data);
+                $this->db->insert('transaksi', $transaksi);
                
             }
             return TRUE;
         }
         public function tampil_data(){
-            $result = $this->db->get('transaksi');
+            $result = $this->db->get('history');
             if($result->num_rows() > 0){
                 return $result->result();
             }else {

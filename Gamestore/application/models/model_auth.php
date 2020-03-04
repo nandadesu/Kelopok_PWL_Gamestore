@@ -15,6 +15,10 @@
                 return array();
             }
         }
+
+        public function getUser(){
+           return $this->db->get('user')->result_array();
+        }
     
     }
     

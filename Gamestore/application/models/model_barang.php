@@ -6,6 +6,9 @@
         public function tampil_data(){
             return $this->db->get('game');
         }
+        public function tampil_user(){
+            return $this->db->get('user');
+        }
         public function tambah_barang($data,$table){
             $this->db->insert($table, $data);
         }

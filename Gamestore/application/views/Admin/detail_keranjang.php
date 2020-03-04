@@ -3,7 +3,7 @@
     <table class="table table-bordered table-striped table-hover">
         <tr>
             <th>No</th>
-            <th>Nama Game</th>s
+            <th>Nama Game</th>
             <th>Harga</th>
             <th>Sub Total</th>
         </tr>
