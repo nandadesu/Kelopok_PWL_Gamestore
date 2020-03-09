@@ -1,4 +1,3 @@
- 
 
 <body class="bg-gradient-primary">
 
@@ -18,15 +17,23 @@
                   <div class="text-center">
                     <h1 class="h4 text-gray-900 mb-4">Login</h1>
                   </div>
-                  <?php echo $this->session->flashdata('pesan') ?>
-                  <form class="user" method="post" action="<?php echo base_url('Auth/login') ?>" class="user">
+
+                  <form class="user" method="post" action="<?php echo base_url('Auth/proses_login') ?>" class="user">
                       <div class="form-group">
                         <input type="text" name="username" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Username">
-                        <?php echo form_error('username','<div class="text_danger">','</div>'); ?>
                       </div>
                       <div class="form-group">
                         <input data-toggle="password" type="password" name="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password">
-                        <?php echo form_error('password','<div class="text_danger">','</div>'); ?>
+                      </div>
+                      
+                      <div class="form-group">
+                        <?php
+                          if (isset($pesan)) {
+                            echo $pesan;
+                          } else {
+                            echo "Masukkan username dan password anda";
+                          }
+                        ?>
                       </div><hr>
 
                       <button type="submit" class="btn btn-primary form-control">Login</button>
@@ -41,13 +48,7 @@
             </div>
           </div>
         </div>
-
       </div>
-
     </div>
-
   </div>
-
 </body>
-
-</html>

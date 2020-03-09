@@ -4,20 +4,21 @@
     
     class model_auth extends CI_Model {
     
-        public function cek_login(){
-            $username = set_value('username');
-            $password = set_value('password');
-
-            $result = $this->db->where('username',$username)->where('password', $password)->limit(1)->get('user');
-            if($result->num_rows() > 0){
-                return $result->row();
-            }else{
-                return array();
-            }
-        }
-
         public function getUser(){
-           return $this->db->get('user')->result_array();
+            $this->db->where('level', '2');
+            return $this->db->get('user')->result_array();
+        }
+    
+        public function activateUser($id){
+            $this->db->set('status', 'active');
+            $this->db->where('id', $id);
+            $this->db->update('user');	
+        }
+    
+        public function disableUser($id){
+            $this->db->set('status', 'diactive');
+            $this->db->where('id', $id);
+            $this->db->update('user');	
         }
     
     }

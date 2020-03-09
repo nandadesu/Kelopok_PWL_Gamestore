@@ -44,7 +44,7 @@
                 </li>
               </ul>
             </div>
-
+  <!--
             <div class="topbar-divider d-none d-sm-block"></div>
             <div class="navbar">
               <ul class="nav navbar-nav navbar-right ">
@@ -54,17 +54,19 @@
                 </li>
               </ul>
             </div>
-
+-->
           <div class="topbar-divider d-none d-sm-block"></div>
 
           <!-- Nav Item - User Information -->
 
           <ul class="na navbar-nav navbar-right">
-            <?php  if($this->session->userdata('username')) { ?>
+          <?php  if($this->session->userdata('username')) { ?>
               <li><div><?php echo $this->session->userdata(' username ') ?></div></li>
               <li><?php echo anchor('auth/logout','<div class="btn btn-sm btn-danger">Logout</div>'); ?></li>
+
             <?php } else { ?>
               <li><?php echo anchor('auth/logout', ' <div class="btn btn-sm btn-success">Login</div>');?></li>
+
             <?php  } ?>
           </ul>
         </ul>
